@@ -1,16 +1,14 @@
 from src.engine import Engine
+import src.images as SPRITES
 
 class ClimateChangeIDLEGame:
     def __init__(self):
         self.ENGINE = Engine("Climate Change Clicker", "minaroblox")
         # this doesn't work # self.ENGINE.setTerminalSize(100, 100)
         self.TOTAL_VALUE = 0
-        self.AMBIENT_SPRITE = "images/ambient.txt"
-        self.DOLLAR_SPRITE = "images/dollar_sprite.txt"
-        self.MENU_SPRITE = "images/menu.txt"
-        self.AMBIENT_SPR = self.ENGINE.spriteHandler(self.AMBIENT_SPRITE)
-        self.DOLLAR_SPR = self.ENGINE.spriteHandler(self.DOLLAR_SPRITE)
-        self.MENU_SPRITE_SPR = self.ENGINE.spriteHandler(self.MENU_SPRITE)
+        self.AMBIENT_SPR = SPRITES.AMBIENT
+        self.DOLLAR_SPR = SPRITES.DOLLAR_SPR
+        self.MENU_SPRITE_SPR = SPRITES.MENU
         self.KEYS = {
             "Increment": "w",
             "Store": "d",
