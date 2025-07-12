@@ -177,6 +177,7 @@ class ClimateChangeIDLEGame:
             print("5. Print this text.")
             print(" ")
         chooseSelection()
+        aaaa = False
         while True:
             print("Make your selection in numbers")
             try:
@@ -197,11 +198,12 @@ class ClimateChangeIDLEGame:
                         self.ENGINE.saveData(data)
                         print("Data erasen!")
                     case 4:
-                        exit()
+                        aaaa = True
+                        break
             except:
                 print("Enter a number!")
-
-        self.game() # Start of game loop
+        if aaaa == False:
+            self.game() # Start of game loop
 
     def game(self):
         """
